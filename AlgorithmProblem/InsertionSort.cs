@@ -8,28 +8,28 @@ namespace AlgorithmProblem
     {
         public void Insertion()
         {
-            Console.WriteLine("Enter the how many numbers you need to sort");
+            Console.WriteLine("Enter the how many strings you need to sort");
             int num = Convert.ToInt16(Console.ReadLine());
-            int[] numbers = new int[num];
-            Console.WriteLine("enter numbers");
+            string[] words = new string[num];
+            Console.WriteLine("enter string");
             for (int i = 0; i < num; i++)
             {
-                numbers[i] = Convert.ToInt16(Console.ReadLine());
+                words[i] = Console.ReadLine();
             }
             for (int i = 1; i < num; ++i)
             {
-                int key = numbers[i];
+                string key = words[i];
                 int j = i - 1;
-                while (j >= 0 && numbers[j] > key)
+                while (j >= 0 && (words[j].CompareTo(key)>0))
                 {
-                    numbers[j + 1] = numbers[j];
-                    j =j - 1;
+                    words[j + 1] = words[j];
+                    j--;
                 }
-                numbers[j + 1] = key;
+                words[j + 1] = key;
             }
 
             Console.WriteLine("After Insertion sorting list is :");
-            foreach (int number in numbers)
+            foreach (string number in words)
             {
                 Console.Write(number + " ");
             }
