@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataStructureProblem;
+using System;
 using System.IO;
 
 namespace AlgorithmProblem
@@ -11,9 +12,9 @@ namespace AlgorithmProblem
         public static int choice;
         static void Main(string[] args)
         {
-            while (choice != 9)
+            while (choice != 13)
             {
-                Console.WriteLine("\n1: Iteration And Recursion\n2: SearchWord\n3: Bubble Sort\n4: Insertion Sort\n5: Merge Sort\n6: Anagram Detection\n7: Prime Number\n8: Prime Palindrome\n9: Exit\nEnter your choice");
+                Console.WriteLine("\n1: Iteration And Recursion\n2: SearchWord\n3: Bubble Sort\n4: Insertion Sort\n5: Merge Sort\n6: Anagram Detection\n7: Prime Number\n8: Prime Palindrome\n9: Unordered List\n10: Ordered List\n11: Bank Cash Counter\n12: Balanced Paranthesis\n13: Exit\nEnter your choice");
                 choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -50,6 +51,22 @@ namespace AlgorithmProblem
                         PrimePalindrom primePalindrom = new PrimePalindrom();
                         PrimeNumbers.Prime();
                         primePalindrom.Display();
+                        break;
+                    case 9:
+                        OrderedList orderedList = new OrderedList();
+                        orderedList.Ordered();
+                        break;
+                    case 10:
+                        UnorderList unorderList = new UnorderList();
+                        unorderList.Unorder();
+                        break;
+                    case 11:
+                        BankCashCounter bankCashCounter = new BankCashCounter();
+                        bankCashCounter.CashCounter();
+                        break;
+                    case 12:
+                        BalanceParanthesis balanceParenthesis = new BalanceParanthesis();
+                        balanceParenthesis.Check();
                         break;
                     default:
                         Console.WriteLine("Oops! You select wrong input.");

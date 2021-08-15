@@ -31,7 +31,7 @@ namespace AlgorithmProblem
 			{
 				r = n % 10;
 				sum = (sum * 10) + r;
-				n = n / 10;
+				n /= 10;
 			}
 			if (sum == temp)
 			{
